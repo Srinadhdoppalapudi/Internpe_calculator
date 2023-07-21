@@ -84,13 +84,8 @@ const addCalc = (enteredValue) => {
     }
 };
 
-// uncomment code below to disable right-click, that being said, don't do it! It will only annoy the user.
-// document.addEventListener('contextmenu', event => event.preventDefault())
-
 const liveKeyboardInputHandler = (k) => {
-    // uncomment this if you want to catch all keyboard inputs, and sink them. But, it will also catch things like Ctrl/Cmd + R or Ctrl/Cmd + Shift/Option + I
-    // k.preventDefault()
-
+   
     if (k.key === "0") {
         addCalc(0);
     } else if (k.key === "1") {
@@ -135,5 +130,4 @@ const liveKeyboardInputHandler = (k) => {
         res.value = "";
     }
 };
-
 document.addEventListener("keydown", liveKeyboardInputHandler);
